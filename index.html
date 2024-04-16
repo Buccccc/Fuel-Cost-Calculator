@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Fuel Cost Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h1>Fuel Cost Calculator</h1>
+        <form>
+            <div class="form-input">
+                <div class="unit-select">
+                    <label id="fuel-economy" for="fuel-economy-value">Fuel Economy in
+                        <select name="fuel-economy-unit" id="fuel-economy-unit">
+                            <option value="l/100km" selected>L/100km</option>
+                            <option value="km/l">km/L</option>
+                            <option value="mpg">MPG</option>   
+                        </select>
+                    </label>
+                </div>
+                <input class="number-input" id="fuel-economy-value" type="number" step="any" min="0">
+            </div>
+            <div class="form-input">
+                <div class="unit-select">
+                    <label id="fuel-price" for="fuel-price-value">Fuel Price in 
+                        <select name="fuel-price-unit" id="fuel-price-unit">
+                            <option value="price/l" selected>Price/L</option>
+                            <option value="price/g">Price/g</option>
+                            <option value="price/bbl">Price/bbl</option>
+                        </select>
+                    </label>
+                </div>
+                <input class="number-input" id="fuel-price-value" type="number" step="any" min="0">
+            </div>  
+            <div class="form-input">
+                <div class="unit-select">
+                    <label id="trip-distance" for="trip-distance-value">
+                        Trip Distance in 
+                        <select name="trip-distance-unit" id="trip-distance-unit">
+                            <option value="km" selected>km</option>
+                            <option value="mi">miles</option>
+                        </select>
+                    </label>
+                </div>
+                <input class="number-input" id="trip-distance-value" type="number" step="any" min="0">
+            </div>
+            <div class="form-input">
+                <input class="calculate-button" type="submit" value="Calculate">
+            </div>
+        </form>
+        <div id="output">
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
